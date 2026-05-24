@@ -1,0 +1,4 @@
+name,address,phone,herdNo,asgn,tasks,product,tags
+John Smith,123 Farm Road,555-0101,HERD001,Alice Johnson,5,Dairy Plus,"organic,premium"
+Mary Brown,456 Ranch Street,555-0102,HERD002,Bob Wilson,3,Cattle Feed,"standard,local"
+David Green,789 Meadow Lane,555-0103,HERD003,Carol Davis,7,Seed Mix,"organic,premium,local"

@@ -1,0 +1,121 @@
+# Query: livefarm
+# Flags: CaseSensitive
+# ContextLines: 1
+
+37 results - 10 files
+
+package.json:
+  150    "workspaces": [
+  151:     "apps/agrosphere",
+  152      "apps/mobile",
+
+.github\workflows\auto-assign-issues.yml:
+  10    TO_DO_OPTION_ID: 'b0406991'
+  11:   BOT_USERNAME: 'agrosphere-bot'
+  12    DEFAULT_PHASE_LABEL: 'phase/design'
+
+apps\backend\.env.example:
+  1: DATABASE_URL="postgresql://user:password@localhost:5432/agrosphere"
+  2  PORT=3001
+
+apps\keycloakify-starter\vite.config.js:
+  19              {
+  20:                 find: "@agrosphere/shared",
+  21                  replacement: path.resolve(__dirname, "../../libs/shared/src/index.ts")
+
+  23              {
+  24:                 find: "@agrosphere/shared/",
+  25                  replacement: path.resolve(__dirname, "../../libs/shared/src/")
+
+  30          include: [
+  31:             "@agrosphere/shared",
+  32              "react",
+
+apps\keycloakify-starter\vite.config.js.timestamp-1761128852682-396d63ef0ab34.mjs:
+   1  // vite.config.js
+   2: import tailwindcss from "file:///Users/admin/wk-prjk/agrosphere-monorepo/node_modules/@tailwindcss/vite/dist/index.mjs";
+   3: import { defineConfig } from "file:///Users/admin/wk-prjk/agrosphere-monorepo/apps/keycloakify-starter/node_modules/vite/dist/node/index.js";
+   4: import react from "file:///Users/admin/wk-prjk/agrosphere-monorepo/node_modules/@vitejs/plugin-react/dist/index.js";
+   5: import { keycloakify } from "file:///Users/admin/wk-prjk/agrosphere-monorepo/node_modules/keycloakify/vite-plugin/index.js";
+   6: import svgr from "file:///Users/admin/wk-prjk/agrosphere-monorepo/node_modules/vite-plugin-svgr/dist/index.js";
+   7  import path from "path";
+   8: var __vite_injected_original_dirname = "/Users/admin/wk-prjk/agrosphere-monorepo/apps/keycloakify-starter";
+   9  var vite_config_default = defineConfig({
+
+  20        {
+  21:         find: "@agrosphere/shared",
+  22          replacement: path.resolve(__vite_injected_original_dirname, "../../libs/shared/src/index.ts")
+
+  24        {
+  25:         find: "@agrosphere/shared/",
+  26          replacement: path.resolve(__vite_injected_original_dirname, "../../libs/shared/src/")
+
+  31      include: [
+  32:       "@agrosphere/shared",
+  33        "react",
+
+apps\keycloakify-starter\vite.config.ts.timestamp-1752832827222-154153d1388cb.mjs:
+   1  // vite.config.ts
+   2: import tailwindcss from "file:///Users/admin/agrosphere-monorepo/node_modules/@tailwindcss/vite/dist/index.mjs";
+   3: import { defineConfig } from "file:///Users/admin/agrosphere-monorepo/apps/keycloakify-starter/node_modules/vite/dist/node/index.js";
+   4: import react from "file:///Users/admin/agrosphere-monorepo/node_modules/@vitejs/plugin-react/dist/index.mjs";
+   5: import { keycloakify } from "file:///Users/admin/agrosphere-monorepo/node_modules/keycloakify/vite-plugin/index.js";
+   6  import path from "path";
+   7: var __vite_injected_original_dirname = "/Users/admin/agrosphere-monorepo/apps/keycloakify-starter";
+   8  var vite_config_default = defineConfig({
+
+  18        {
+  19:         find: "@agrosphere/shared",
+  20          replacement: path.resolve(__vite_injected_original_dirname, "../../libs/shared/src/index.ts")
+
+  22        {
+  23:         find: "@agrosphere/shared/",
+  24          replacement: path.resolve(__vite_injected_original_dirname, "../../libs/shared/src/")
+
+  29      include: [
+  30:       "@agrosphere/shared",
+  31        "react",
+
+apps\keycloakify-starter\vite.config.ts.timestamp-1753707040591-b99a17e13d4c4.mjs:
+   1  // vite.config.ts
+   2: import tailwindcss from "file:///Users/admin/agrosphere-monorepo/node_modules/@tailwindcss/vite/dist/index.mjs";
+   3: import { defineConfig } from "file:///Users/admin/agrosphere-monorepo/apps/keycloakify-starter/node_modules/vite/dist/node/index.js";
+   4: import react from "file:///Users/admin/agrosphere-monorepo/node_modules/@vitejs/plugin-react/dist/index.js";
+   5: import { keycloakify } from "file:///Users/admin/agrosphere-monorepo/node_modules/keycloakify/vite-plugin/index.js";
+   6: import svgr from "file:///Users/admin/agrosphere-monorepo/node_modules/vite-plugin-svgr/dist/index.js";
+   7  import path from "path";
+   8: var __vite_injected_original_dirname = "/Users/admin/agrosphere-monorepo/apps/keycloakify-starter";
+   9  var vite_config_default = defineConfig({
+
+  20        {
+  21:         find: "@agrosphere/shared",
+  22          replacement: path.resolve(__vite_injected_original_dirname, "../../libs/shared/src/index.ts")
+
+  24        {
+  25:         find: "@agrosphere/shared/",
+  26          replacement: path.resolve(__vite_injected_original_dirname, "../../libs/shared/src/")
+
+  31      include: [
+  32:       "@agrosphere/shared",
+  33        "react",
+
+apps\agrosphere\next.config.js:
+   2  const nextConfig = {
+   3:   transpilePackages: ['@agrosphere/shared'],
+   4    experimental: {
+   5:     optimizePackageImports: ['@agrosphere/shared'],
+   6      // Exclude certain directories from being treated as pages
+
+  13          source: '/api/:path((?!proxy|auth).)*',
+  14:         destination: 'http://api.agrosphere.ie/api/:path*',
+  15        },
+
+apps\agrosphere\package.json:
+  1  {
+  2:   "name": "@agrosphere/agrosphere",
+  3    "version": "0.0.1",
+
+apps\mobile\metro.config.js:
+  14  const customConfig = {
+  15:   cacheVersion: '@agrosphere/mobile',
+  16    transformer: {

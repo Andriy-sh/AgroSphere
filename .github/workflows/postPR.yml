@@ -1,0 +1,23 @@
+name: Run post PR commands
+
+on:
+  pull_request:
+    types: [closed] # This covers PR closing
+
+jobs:
+  chromatic:
+    if: github.event.pull_request.merged == true # Checks if the pull request is merged
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # important for Chromatic!
+
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Run Chromatic
+        run: npx chromatic --project-token=chpt_8d78bb657d8e8ff

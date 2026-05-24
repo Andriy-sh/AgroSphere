@@ -1,0 +1,47 @@
+name: Add Issues to Project and Move to Backlog
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  add-and-move-issue:
+    name: Add issue to project and move to Backlog
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add issue to project
+        uses: actions/add-to-project@v1.0.2
+        id: add_project
+        with:
+          project-url: 'https://github.com/orgs/M2-Geospatial/projects/5'
+          github-token: ${{ secrets.LIVEFARM_BOT_GITHUB_TOKEN }}
+          labeled: 'bug'
+          label-operator: 'NOT'
+
+      - name: Move Issue to Backlog Column
+        if: steps.add_project.outputs.itemId
+        env:
+          GITHUB_TOKEN: ${{ secrets.LIVEFARM_BOT_GITHUB_TOKEN }}
+          ITEM_ID: ${{ steps.add_project.outputs.itemId }}
+          PROJECT_ID: "PVT_kwDOBB_QEs4A7nWD"
+          STATUS_FIELD_ID: "PVTSSF_lADOBB_QEs4A7nWDzgv3CYI"
+          STATUS_VALUE_ID: "f75ad846"
+        run: |
+          gh api graphql -f query='
+            mutation($project_id: ID!, $item_id: ID!, $status_field_id: ID!, $status_value_id: String!) {
+              updateProjectV2ItemFieldValue(
+                input: {
+                  projectId: $project_id
+                  itemId: $item_id
+                  fieldId: $status_field_id
+                  value: { 
+                    singleSelectOptionId: $status_value_id
+                  }
+                }
+              ) {
+                projectV2Item { # <-- CORRECTED: The payload field is 'projectV2Item', not 'item'.
+                  id
+                }
+              }
+            }' -f project_id=$PROJECT_ID -f item_id=$ITEM_ID -f status_field_id=$STATUS_FIELD_ID -f status_value_id=$STATUS_VALUE_ID

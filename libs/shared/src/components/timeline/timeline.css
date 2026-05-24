@@ -1,0 +1,22 @@
+.gantt-bar {
+  background: #fff !important;
+  border: 1px solid #eef0f6 !important;
+  box-sizing: border-box;
+}
+._ganttTaskContent_1sr1d_41 svg {
+  background-color: white !important;
+}
+._barBackground_hr87b_22 {
+  stroke: #eef0f6 !important;
+  stroke-width: 1px !important;
+}
+._barBackground_hr87b_22 {
+  stroke: #eef0f6 !important;
+  stroke-width: 1px !important;
+}
+
+[class*='_barHandle_'],
+[class*='_barRelationHandle_'],
+polygon[class*='_barHandle_'] {
+  display: none !important;
+}

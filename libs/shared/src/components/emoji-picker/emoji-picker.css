@@ -1,0 +1,93 @@
+.emoji-picker-container {
+  position: relative;
+  display: inline-block;
+}
+
+.emoji-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emoji-toggle-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.emoji-toggle-btn.compact {
+  padding: 4px;
+}
+
+.emoji-picker-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: auto;
+  z-index: 9999;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.emoji-picker-wrapper.top {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.emoji-picker-wrapper.right {
+  left: auto;
+  right: 0;
+}
+
+.emoji-picker-wrapper.compact {
+  transform: scale(0.9);
+  transform-origin: top left;
+}
+
+.emoji-picker-wrapper.top.compact {
+  transform-origin: bottom left;
+}
+
+/* Ensure the emoji picker appears above all other content */
+.emoji-picker-wrapper .EmojiPickerReact {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Style emoji category labels */
+.emoji-picker-wrapper .epr-emoji-category-label {
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
+
+/* Alternative selectors to ensure styles are applied */
+.emoji-picker-wrapper h2.epr-emoji-category-label {
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
+
+.emoji-picker-wrapper .EmojiPickerReact .epr-emoji-category-label {
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
+
+/* Backdrop to close picker when clicking outside */
+.emoji-picker-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9998;
+  background: transparent;
+}

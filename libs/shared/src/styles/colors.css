@@ -1,0 +1,95 @@
+:root {
+  --color-basic-black: #101010;
+  --color-basic-white: #ffffff;
+  --color-basic-green: #29b54c;
+  --color-basic-red: #ff323f;
+  --color-basic-yellow: #ffc652;
+  --color-basic-blue: #41b0ff;
+  --color-basic-gray: #818d99;
+  --color-basic-gray-light: #dbdee8;
+  --color-basic-border-gray: #eef0f629;
+}
+
+.text-basic-black {
+  color: var(--color-basic-black);
+}
+.text-basic-white {
+  color: var(--color-basic-white);
+}
+.text-basic-green {
+  color: var(--color-basic-green);
+}
+.text-basic-red {
+  color: var(--color-basic-red);
+}
+.text-basic-yellow {
+  color: var(--color-basic-yellow);
+}
+.text-basic-blue {
+  color: var(--color-basic-blue);
+}
+.text-basic-gray-light {
+  color: var(--color-basic-gray-light);
+}
+
+.bg-basic-black {
+  background-color: var(--color-basic-black);
+}
+.bg-basic-white {
+  background-color: var(--color-basic-white);
+}
+.bg-basic-green {
+  background-color: var(--color-basic-green);
+}
+.bg-basic-red {
+  background-color: var(--color-basic-red);
+}
+.bg-basic-yellow {
+  background-color: var(--color-basic-yellow);
+}
+.bg-basic-blue {
+  background-color: var(--color-basic-blue);
+}
+.bg-basic-gray-light {
+  background-color: var(--color-basic-gray-light);
+}
+
+.border-basic-black {
+  border-color: var(--color-basic-black);
+}
+.border-basic-white {
+  border-color: var(--color-basic-white);
+}
+.border-basic-green {
+  border-color: var(--color-basic-green);
+}
+.border-basic-red {
+  border-color: var(--color-basic-red);
+}
+.border-basic-yellow {
+  border-color: var(--color-basic-yellow);
+}
+.border-basic-blue {
+  border-color: var(--color-basic-blue);
+}
+.border-basic-gray-light {
+  border-color: var(--color-basic-gray-light);
+}
+.border-basic-border-gray {
+  border-color: var(--color-basic-border-gray);
+}
+
+/* Opacity variants */
+.bg-basic-green-opacity {
+  background-color: rgba(41, 181, 76, 0.1);
+}
+.bg-basic-blue-opacity {
+  background-color: rgba(65, 176, 255, 0.1);
+}
+.bg-basic-red-opacity {
+  background-color: rgba(255, 50, 63, 0.1);
+}
+.bg-basic-yellow-opacity {
+  background-color: rgba(255, 198, 82, 0.12);
+} 
+

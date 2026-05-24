@@ -1,0 +1,11 @@
+declare namespace JSX {
+  interface IntrinsicElements {
+    'stripe-pricing-table': {
+      'pricing-table-id'?: string;
+      'publishable-key'?: string;
+      'client-reference-id'?: string;
+      'customer-email'?: string;
+      [key: string]: string | undefined;
+    };
+  }
+}

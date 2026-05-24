@@ -1,0 +1,196 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Client {
+  id              String   @id @default(cuid())
+  businessName    String
+  businessType    String
+  firstName       String
+  lastName        String
+  fullName        String
+  mobile          String
+  email           String
+  addressLine1    String
+  addressLine2    String
+  city            String
+  country         String?
+  eircode         String
+  county          String
+  fullAddress     String
+  contactName     String
+  contactRole     String?
+  accountNumber   String?
+  derogation      Boolean
+  farmType        String?
+  herdNo          String?
+  organic         Boolean?
+  status          String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  tags            String[]
+  activeTasks     Int      @default(0)
+
+  @@map("clients")
+}
+
+model Farm {
+  id          String    @id @default(cuid())
+  name        String
+  locationX   Float
+  locationY   Float
+  locationXyX Float
+  locationXyY Float
+  itemId      String    @unique
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  parcels     Parcel[]
+
+  @@map("farms")
+}
+
+model Parcel {
+  id               String    @id @default(cuid())
+  farmId           String
+  farm             Farm      @relation(fields: [farmId], references: [id], onDelete: Cascade)
+  itemId           Int
+  name             String
+  fieldNo          Int?
+  crop             String
+  soilType         String
+  soilTypeFormatted String
+  acre             Float
+  hectare          String
+  boundariesX      Float[]
+  boundariesY      Float[]
+  boundariesXyX    Float[]
+  boundariesXyY    Float[]
+  eosdaFieldId     String?
+  identifier       String?
+  identifierXyX    Float?
+  identifierXyY    Float?
+  productivityId   String?
+  vegetationId     String?
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  zones            Zone[]
+
+  @@map("parcels")
+}
+
+model Zone {
+  id                String  @id @default(cuid())
+  parcelId          String
+  parcel            Parcel  @relation(fields: [parcelId], references: [id], onDelete: Cascade)
+  farmId            String
+  itemId            Int
+  name              String
+  fieldNo           Int?
+  crop              String
+  soilType          String
+  acre              Float
+  hectare           String
+  boundariesX       Float[]
+  boundariesY       Float[]
+  boundariesXyX     Float[]
+  boundariesXyY     Float[]
+  isMerged          Boolean @default(false)
+  isSplit           Boolean @default(false)
+  showDefaultPlan   Boolean @default(false)
+  samplePlan        Int?
+  parcelItemId      String?
+  createdAt         DateTime @default(now())
+
+  @@map("zones")
+}
+
+model Task {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  status      String   @default("pending")
+  type        String
+  priority    String?
+  assignedTo  String?
+  dueDate     DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("tasks")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  fullName  String
+  firstName String
+  lastName  String
+  role      String
+  tenantId  String?
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
+
+model Organisation {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("organisations")
+}
+
+model Team {
+  id        String   @id @default(cuid())
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("teams")
+}
+
+model TeamUser {
+  id        String   @id @default(cuid())
+  teamId    String
+  userId    String
+  role      String
+  status    String   @default("pending")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("team_users")
+}
+
+model Setting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("settings")
+}
+
+model Subscription {
+  id        String   @id @default(cuid())
+  planId    String
+  planName  String
+  price     String
+  period    String
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("subscriptions")
+}

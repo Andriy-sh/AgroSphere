@@ -1,0 +1,12 @@
+{
+  "$schema": "https://www.chromatic.com/config-file.schema.json",
+  "projectId": "chpt_8d78bb657d8e8ff",
+  "onlyChanged": true,
+  "externals": ["public/**"],
+  "autoAcceptChanges": "feat/shared-lib",
+  "exitOnceUploaded": true,
+  "buildCommand": "npx storybook build --config-dir libs/shared/.storybook --output-dir dist/storybook/shared",
+  "outputDir": "dist/storybook/shared",
+  "skip": "dependabot/**",
+  "storybookBaseDir": "."
+}

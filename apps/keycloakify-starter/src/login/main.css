@@ -1,0 +1,269 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("/fonts/Gilroy-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("/fonts/Gilroy-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("/fonts/Gilroy-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("/fonts/Gilroy-Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    font-family: "Gilroy", Arial, Helvetica, sans-serif;
+}
+
+.page-wrapper {
+    display: flex;
+    height: 100vh;
+    background: #fff;
+    gap: 20px;
+    padding: 20px;
+}
+.left-side {
+    width: 50%;
+    background: #144532;
+    display: flex;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+}
+.right-side {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.kcFormOptionsWrapperClass a {
+    color: #29b54c;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    text-transform: none;
+    font-family: inherit;
+    display: block;
+    width: 100%;
+}
+
+.button-row {
+    display: flex;
+    gap: 8px;
+}
+
+.kcButtonClass {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 100%;
+    border-radius: 24px;
+    font-size: 24px;
+    font-weight: 400;
+    background: #29b54c;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 16px;
+    min-height: 36px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    width: 100%;
+    box-shadow: none;
+    text-transform: none;
+    letter-spacing: 0;
+    transition: background 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kcButtonClass:hover {
+    background: #249e45;
+}
+
+.kcButtonCancelClass {
+    background: #f3f5fa;
+    color: #8a94a6;
+    border: none;
+    box-shadow: none;
+    transition: background 0.2s;
+}
+
+.kcButtonCancelClass:hover {
+    background: #e9eaf3;
+}
+
+.kcButtonPrimaryClass {
+    background: #29b54c;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    transition: background 0.2s;
+}
+
+.pf-c-button.pf-m-primary {
+    background-color: #249e45;
+}
+
+.login-pf-page .card-pf {
+    padding: 0 20px 0px 20px;
+}
+
+.kcInputGroup {
+    position: relative;
+    width: 100%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.kcInputClass.pf-c-form-control {
+    border-radius: 8px;
+    border: 1px solid #e9eaf3;
+    background: #fff;
+    padding: 8px 48px 8px 16px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 140%;
+    color: #8a94a6;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: border 0.2s;
+    z-index: 1;
+    font-size: 14px !important;
+    color: black !important;
+    margin-top: 8px !important;
+}
+
+.kcInputClass.pf-c-form-control:focus {
+    border: 1.5px solid #29b54c;
+}
+
+.kcFormPasswordVisibilityButtonClass {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #8a94a6;
+    height: 12px;
+    width: 18px;
+    z-index: 2;
+}
+
+.kcFormPasswordVisibilityButtonClass:focus {
+    outline: none;
+}
+
+.pf-c-input-group input:not([type="checkbox"]):not([type="radio"]),
+.pf-c-input-group textarea {
+    font-size: 14px;
+}
+.kcFormPasswordVisibilityButtonClass.pf-c-button.pf-m-control {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.kcFormPasswordVisibilityButtonClass.pf-c-button.pf-m-control::after {
+    border: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    content: none !important;
+    display: none !important;
+}
+
+.kcHeaderWrapperClass {
+    line-height: 120%;
+    padding: 24px 24px 0 24px !important;
+}
+
+.footer-copyright {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+    width: 560px;
+    height: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+    color: #818d99;
+    font-family: "Gilroy", Arial, sans-serif;
+    background: transparent;
+    padding: 0;
+    z-index: 10;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-pf-page {
+    padding-top: 0px !important;
+    padding-bottom: 24px !important;
+}
+
+.kcLabelClass {
+    color: #101010 !important;
+    font-weight: 400 !important;
+}
+
+#kc-header-wrapper {
+    letter-spacing: 0 !important;
+    line-height: 1.1 !important;
+}
+
+.login-pf body {
+    background: none !important;
+}
+
+@media (min-width: 768px) {
+    .login-pf-page .login-pf-page-header {
+        margin-bottom: 0px;
+    }
+}
+
+.instruction {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}

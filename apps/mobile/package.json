@@ -1,0 +1,9 @@
+{
+  "name": "@agrosphere/mobile",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "expo-font": "^13.3.2",
+    "react-native-svg": "^15.12.0"
+  }
+}

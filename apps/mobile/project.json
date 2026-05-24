@@ -1,0 +1,83 @@
+{
+  "name": "@agrosphere/mobile",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/mobile/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/expo:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/mobile"
+      },
+      "configurations": {
+        "development": {
+          "developmentClient": true,
+          "distribution": "internal"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/expo:serve",
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 8081
+      },
+      "configurations": {
+        "development": {
+          "dev": true
+        },
+        "production": {
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nx/expo:export",
+      "options": {
+        "outputPath": "dist/apps/mobile/exported"
+      }
+    },
+    "start": {
+      "executor": "@nx/expo:start",
+      "options": {}
+    },
+    "android": {
+      "executor": "@nx/expo:run",
+      "options": {
+        "platform": "android"
+      }
+    },
+    "ios": {
+      "executor": "@nx/expo:run",
+      "options": {
+        "platform": "ios"
+      }
+    },
+    "web": {
+      "executor": "@nx/expo:run",
+      "options": {
+        "platform": "web"
+      }
+    },
+    "prebuild": {
+      "executor": "@nx/expo:prebuild",
+      "options": {}
+    },
+    "install": {
+      "executor": "@nx/expo:install",
+      "options": {}
+    },
+    "submit": {
+      "executor": "@nx/expo:submit",
+      "options": {}
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": []
+}

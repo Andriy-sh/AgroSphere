@@ -1,0 +1,133 @@
+.fc-custom-style .fc-daygrid-day-number {
+  padding-left: 0.5rem;
+}
+
+.fc-custom-style .fc-daygrid-event {
+  padding: 0;
+}
+.fc-daygrid-day-top {
+  flex-direction: row !important;
+  color: var(--basic-black) !important;
+}
+.fc-scrollgrid {
+  border-radius: 8px !important;
+}
+
+.fc {
+  border: 1px solid #EEF0F6;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.fc .fc-daygrid-head {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.fc .fc-daygrid-body {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.fc .fc-daygrid-day {
+  border-bottom: none !important;
+  border-right: none !important;
+}
+
+.fc .fc-view-harness {
+  border: none;
+}
+.fc-theme-standard .fc-scrollgrid {
+  border: none !important;
+}
+
+.fc-theme-standard td:last-child {
+  border-right: none !important;
+}
+
+.fc-theme-standard tr:last-child td {
+  border-bottom: none !important;
+}
+.fc-event.fc-event-start.fc-event-end.fc-event-past.fc-daygrid-event.fc-daygrid-dot-event {
+  padding: 0px 12px !important;
+}
+.fc-event.fc-event-start.fc-event-end.fc-event-past.fc-daygrid-event.fc-daygrid-dot-event:hover {
+  background-color: transparent !important;
+  transform: none !important;
+  box-shadow: none !important;
+  cursor: default !important;
+}
+.fc-media-screen.fc-direction-ltr.fc-theme-standard {
+  height: 100% !important;
+}
+.fc-daygrid-body {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.fc-daygrid-body table tr {
+  flex-grow: 1 !important;
+}
+.fc-dayGridMonth-view.fc-view.fc-daygrid.fc-scrollgrid  {
+  height: 100% !important;
+}
+.fc-daygrid-body {
+  height: 100% !important;
+}
+
+.fc-daygrid-body .fc-scrollgrid-sync-table {
+  height: 100% !important;
+}
+
+.fc-daygrid-body tbody {
+  height: 100% !important;
+}
+
+.fc-daygrid-body tbody tr {
+  flex-grow: 1 !important;
+}
+.fc-scrollgrid tbody {
+  height: 100% !important;
+}
+.fc-scrollgrid tbody tr {
+  flex-grow: 1 !important;
+}
+.fc-scrollgrid-sync-table {
+  height: 100% !important;
+}
+.fc-scrollgrid-sync-table tbody {
+  height: 100% !important;
+}
+.fc-scrollgrid-sync-table tbody tr {
+  flex-grow: 1 !important;
+}
+.fc-dayGridMonth-view.fc-view.fc-daygrid {
+  height: 100% !important;
+}
+.fc-scrollgrid {
+  height: 100% !important;
+}
+.fc-scroller-harness{
+  height: 100% !important;
+}
+
+.fc-scroller {
+  height: 100% !important;
+}
+.fc-theme-standard td, .fc-theme-standard th {
+    border: 1px solid #EEF0F6;
+}
+
+.fc-col-header-cell-cushion{
+  padding: 10px 0px !important;
+  color: var(--basic-gray) !important;
+}
+
+
+.fc-day-other {
+  background-color: #EEF0F647 !important;
+}
+.fc .fc-daygrid-day.fc-day-today{
+  background-color: white !important;
+}
